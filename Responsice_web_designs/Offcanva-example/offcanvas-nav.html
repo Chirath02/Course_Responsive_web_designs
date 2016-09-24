@@ -48,5 +48,11 @@
         <main class="light_blue">
         <button id="hamburgar">=</button>
         </main>
+      <script>
+        hamburgar.addEventListener('click', function(e) {
+            drawer.classList.toggle('open');
+            e.stopPropagation();
+        })
+      </script>
   </body>
 </html>
