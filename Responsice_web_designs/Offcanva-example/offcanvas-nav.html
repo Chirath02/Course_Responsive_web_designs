@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Mostly Fluid - Quiz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .dark_blue {
+            background-color: darkblue;
+        }
+        .light_blue {
+            background-color:  aqua;
+            height: 100%;
+        }
+        html, body, main {
+            height: 100%;
+            width: 100%;
+        }
+        nav {
+            width: 300px;
+            height: 100%;
+            position: absolute;
+            transform: translate(-330px, 0);
+            transition: transform 0.3 ease;
+        }
+        .open {
+            transform: translate(0, 0);
+        }
+        
+        @media screen and (min-width: 600px) {
+            nav {
+                position: relative;
+                transform: translate(0, 0);
+            }
+            body {
+                display: flex;
+                flex-flow: row wrap;
+            }
+            main {
+                width: auto;
+                flex-grow: 1;
+            }
+        }
+    </style>
+  </head>
+  <body>
+        <nav id="drawer" class="dark_blue"></nav>
+        <main class="light_blue">
+        <button id="hamburgar">=</button>
+        </main>
+  </body>
+</html>
